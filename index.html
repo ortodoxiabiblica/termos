@@ -1,46 +1,77 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - Bíblia com Assistente</title>
+    <title>Política de Privacidade | Bíblia com Assistente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9fafb; }
-        h1 { color: #2563eb; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; }
-        h2 { color: #1e40af; margin-top: 30px; }
-        p { margin-bottom: 15px; }
-        .container { background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Política de Privacidade</h1>
-        <p><strong>Última atualização:</strong> 27 de Março de 2026</p>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200">
+    
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-14 shadow-lg">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-5 backdrop-blur-sm shadow-inner">
+                <span class="text-3xl">✨</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Política de Privacidade</h1>
+            <p class="text-blue-100 font-medium text-lg">Aplicativo Bíblia com Assistente</p>
+        </div>
+    </header>
 
-        <p>Bem-vindo ao aplicativo <strong>Bíblia com Assistente</strong>. Nós levamos a sua privacidade a sério e estamos comprometidos em proteger as suas informações. Esta Política de Privacidade explica como lidamos com os dados ao utilizar o nosso aplicativo.</p>
+    <main class="max-w-3xl mx-auto px-6 py-12 -mt-10">
+        <div class="bg-white rounded-[2rem] shadow-xl p-8 md:p-12 border border-slate-100">
+            <p class="text-xs text-slate-400 mb-8 font-bold uppercase tracking-widest border-b border-slate-100 pb-4">Última atualização: 27 de Março de 2026</p>
 
-        <h2>1. Coleta e Armazenamento Local de Dados</h2>
-        <p>O aplicativo foi projetado para respeitar a sua privacidade. <strong>Nós não coletamos, não armazenamos em nossos servidores e não vendemos os seus dados pessoais.</strong></p>
-        <p>Todas as suas marcações de versículos, histórico de leitura, configurações de fonte e histórico de conversas com o Assistente de IA são salvos <strong>exclusivamente de forma local no seu próprio dispositivo</strong> (via <i>localStorage</i>). Se você desinstalar o aplicativo, esses dados serão apagados do seu aparelho.</p>
+            <div class="space-y-8 text-slate-600 leading-relaxed text-[15px] md:text-[16px]">
+                <section>
+                    <p class="text-lg text-slate-700 font-medium">Bem-vindo ao aplicativo <strong>Bíblia com Assistente</strong>. A sua privacidade é um pilar fundamental para nós. Esta política foi redigida com clareza para explicar como a nossa tecnologia interage com os seus dados, garantindo total transparência e segurança.</p>
+                </section>
 
-        <h2>2. Uso de Serviços de Terceiros</h2>
-        <p>Para fornecer funcionalidades avançadas, nosso aplicativo se conecta a serviços terceirizados seguros:</p>
-        <ul>
-            <li><strong>Inteligência Artificial (Google Gemini API):</strong> Quando você envia uma pergunta ou pede a explicação de um versículo, apenas o texto da sua pergunta é enviado de forma criptografada para a API responsável por processar e retornar a resposta teológica.</li>
-            <li><strong>Assinaturas (RevenueCat):</strong> Para gerenciar as assinaturas da versão "Pro", utilizamos a infraestrutura da RevenueCat e as lojas oficiais (Google Play). Estes serviços gerenciam os pagamentos de forma anônima, garantindo que não tenhamos acesso aos dados do seu cartão de crédito.</li>
-        </ul>
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="text-blue-500">1.</span> Coleta e Armazenamento Local</h2>
+                    <p>O nosso aplicativo foi projetado sob a premissa da privacidade absoluta. <strong>Nós não coletamos, não rastreamos e não armazenamos os seus dados pessoais em servidores próprios.</strong></p>
+                    <p class="mt-3">Todas as informações geradas por você — como marcações de versículos, histórico de estudos, buscas e preferências de leitura — são salvas <strong>exclusivamente na memória interna do seu próprio dispositivo</strong>. Você tem o controle total: ao desinstalar o aplicativo, todos esses dados são permanentemente apagados do seu aparelho.</p>
+                </section>
 
-        <h2>3. Compartilhamento de Informações</h2>
-        <p>Como não coletamos dados pessoais identificáveis nos nossos servidores, não temos o que compartilhar ou vender para empresas de marketing ou anunciantes.</p>
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="text-blue-500">2.</span> Integração com Serviços Seguros</h2>
+                    <p>Para fornecer respostas teológicas profundas e gerenciar o acesso aos recursos, o aplicativo comunica-se com infraestruturas de terceiros altamente seguras:</p>
+                    <ul class="list-disc pl-5 mt-4 space-y-3 text-slate-600 marker:text-blue-500">
+                        <li><strong>Motor de Inteligência Artificial (Google Gemini):</strong> Quando você faz uma pergunta teológica ou pede a explicação de um versículo, apenas o texto da sua pergunta é enviado de forma anônima e criptografada (via HTTPS) para a API do Google. Nenhuma informação de identidade pessoal é atrelada a essa consulta.</li>
+                        <li><strong>Gerenciamento de Assinaturas (RevenueCat e Google Play):</strong> As assinaturas do plano "Pro" são processadas diretamente pela infraestrutura oficial do Google Play e mediadas pela plataforma RevenueCat. Nós não temos acesso a números de cartão de crédito, documentos ou dados bancários.</li>
+                    </ul>
+                </section>
 
-        <h2>4. Permissões do Dispositivo</h2>
-        <p>O aplicativo pode solicitar o uso da ferramenta nativa de compartilhamento do seu dispositivo para que você possa enviar versículos e estudos bíblicos para seus contatos. Esta ação é sempre iniciada por você.</p>
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="text-blue-500">3.</span> Compartilhamento de Dados</h2>
+                    <p>Como não possuímos banco de dados próprio para armazenar suas informações pessoais, <strong>é tecnicamente impossível vendermos ou compartilharmos os seus dados com empresas de marketing, anunciantes ou quaisquer terceiros.</strong> A sua leitura e os seus estudos são privados.</p>
+                </section>
 
-        <h2>5. Alterações nesta Política</h2>
-        <p>Podemos atualizar nossa Política de Privacidade periodicamente para refletir mudanças tecnológicas ou legais. Recomendamos que você revise esta página ocasionalmente.</p>
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="text-blue-500">4.</span> Permissões do Dispositivo</h2>
+                    <p>O aplicativo não exige acesso invasivo à sua câmera, microfone, contatos ou localização. A única permissão nativa utilizada é a ferramenta de <strong>Compartilhamento</strong> do seu sistema operacional, que é ativada exclusivamente quando você decide, de forma manual, enviar um versículo ou estudo para outra pessoa.</p>
+                </section>
 
-        <h2>6. Contato</h2>
-        <p>Se você tiver alguma dúvida ou sugestão sobre a nossa Política de Privacidade, não hesite em nos contatar através do e-mail de suporte fornecido na página do aplicativo na Google Play Store.</p>
-    </div>
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="text-blue-500">5.</span> Mudanças nesta Política</h2>
+                    <p>Esta política de privacidade pode ser atualizada ocasionalmente para refletir melhorias no aplicativo ou mudanças na legislação aplicável. Recomendamos que os usuários consultem esta página periodicamente. O uso contínuo do aplicativo após quaisquer alterações constitui a aceitação da nova política.</p>
+                </section>
+
+                <section class="bg-slate-50 p-6 md:p-8 rounded-2xl mt-10 border border-slate-100 shadow-sm">
+                    <h2 class="text-lg font-bold text-slate-900 mb-2">Contato e Suporte</h2>
+                    <p class="text-sm text-slate-500">Se você tiver dúvidas sobre esta Política de Privacidade ou sobre as práticas de segurança do aplicativo, entre em contato com a nossa equipe de desenvolvimento através do e-mail de suporte fornecido na nossa página oficial na Google Play Store.</p>
+                </section>
+            </div>
+        </div>
+        
+        <footer class="text-center mt-12 text-slate-400 text-sm font-medium">
+            <p>&copy; 2026 Bíblia com Assistente. Todos os direitos reservados.</p>
+        </footer>
+    </main>
+
 </body>
 </html>
