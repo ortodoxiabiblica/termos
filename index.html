@@ -1,77 +1,204 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade | Bíblia com Assistente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Termos e Privacidade | Bíblia com Assistente</title>
+    <meta name="theme-color" content="#0f172a" id="meta-theme-color">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transition: background-color 0.3s ease, color 0.3s ease; }
+        .toc-link.active { color: #2563eb; font-weight: 700; border-left-color: #2563eb; background-color: rgba(59, 130, 246, 0.05); }
+        .dark .toc-link.active { color: #60a5fa; border-left-color: #60a5fa; background-color: rgba(96, 165, 250, 0.1); }
+        
+        /* Scrollbar elegante */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .dark ::-webkit-scrollbar-thumb { background: #334155; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200">
-    
-    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-14 shadow-lg">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-5 backdrop-blur-sm shadow-inner">
-                <span class="text-3xl">✨</span>
+<body class="bg-slate-50 text-slate-900 dark:bg-[#0b1120] dark:text-slate-100 font-sans selection:bg-blue-200 dark:selection:bg-blue-900 selection:text-blue-900 dark:selection:text-blue-100">
+
+    <header class="fixed top-0 left-0 right-0 bg-white/80 dark:bg-[#0b1120]/80 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800/80 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <a href="index.html" class="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white shadow-sm hover:scale-105 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z" clip-rule="evenodd" /></svg>
+                </a>
+                <span class="font-extrabold text-lg tracking-tight hidden sm:block">Centro de Confiança</span>
             </div>
-            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Política de Privacidade</h1>
-            <p class="text-blue-100 font-medium text-lg">Aplicativo Bíblia com Assistente</p>
+            
+            <button id="btnTema" class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 shadow-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/></svg>
+            </button>
         </div>
     </header>
 
-    <main class="max-w-3xl mx-auto px-6 py-12 -mt-10">
-        <div class="bg-white rounded-[2rem] shadow-xl p-8 md:p-12 border border-slate-100">
-            <p class="text-xs text-slate-400 mb-8 font-bold uppercase tracking-widest border-b border-slate-100 pb-4">Última atualização: 27 de Março de 2026</p>
-
-            <div class="space-y-8 text-slate-600 leading-relaxed text-[15px] md:text-[16px]">
-                <section>
-                    <p class="text-lg text-slate-700 font-medium">Bem-vindo ao aplicativo <strong>Bíblia com Assistente</strong>. A sua privacidade é um pilar fundamental para nós. Esta política foi redigida com clareza para explicar como a nossa tecnologia interage com os seus dados, garantindo total transparência e segurança.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="text-blue-500">1.</span> Coleta e Armazenamento Local</h2>
-                    <p>O nosso aplicativo foi projetado sob a premissa da privacidade absoluta. <strong>Nós não coletamos, não rastreamos e não armazenamos os seus dados pessoais em servidores próprios.</strong></p>
-                    <p class="mt-3">Todas as informações geradas por você — como marcações de versículos, histórico de estudos, buscas e preferências de leitura — são salvas <strong>exclusivamente na memória interna do seu próprio dispositivo</strong>. Você tem o controle total: ao desinstalar o aplicativo, todos esses dados são permanentemente apagados do seu aparelho.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="text-blue-500">2.</span> Integração com Serviços Seguros</h2>
-                    <p>Para fornecer respostas teológicas profundas e gerenciar o acesso aos recursos, o aplicativo comunica-se com infraestruturas de terceiros altamente seguras:</p>
-                    <ul class="list-disc pl-5 mt-4 space-y-3 text-slate-600 marker:text-blue-500">
-                        <li><strong>Motor de Inteligência Artificial (Google Gemini):</strong> Quando você faz uma pergunta teológica ou pede a explicação de um versículo, apenas o texto da sua pergunta é enviado de forma anônima e criptografada (via HTTPS) para a API do Google. Nenhuma informação de identidade pessoal é atrelada a essa consulta.</li>
-                        <li><strong>Gerenciamento de Assinaturas (RevenueCat e Google Play):</strong> As assinaturas do plano "Pro" são processadas diretamente pela infraestrutura oficial do Google Play e mediadas pela plataforma RevenueCat. Nós não temos acesso a números de cartão de crédito, documentos ou dados bancários.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="text-blue-500">3.</span> Compartilhamento de Dados</h2>
-                    <p>Como não possuímos banco de dados próprio para armazenar suas informações pessoais, <strong>é tecnicamente impossível vendermos ou compartilharmos os seus dados com empresas de marketing, anunciantes ou quaisquer terceiros.</strong> A sua leitura e os seus estudos são privados.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="text-blue-500">4.</span> Permissões do Dispositivo</h2>
-                    <p>O aplicativo não exige acesso invasivo à sua câmera, microfone, contatos ou localização. A única permissão nativa utilizada é a ferramenta de <strong>Compartilhamento</strong> do seu sistema operacional, que é ativada exclusivamente quando você decide, de forma manual, enviar um versículo ou estudo para outra pessoa.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2"><span class="text-blue-500">5.</span> Mudanças nesta Política</h2>
-                    <p>Esta política de privacidade pode ser atualizada ocasionalmente para refletir melhorias no aplicativo ou mudanças na legislação aplicável. Recomendamos que os usuários consultem esta página periodicamente. O uso contínuo do aplicativo após quaisquer alterações constitui a aceitação da nova política.</p>
-                </section>
-
-                <section class="bg-slate-50 p-6 md:p-8 rounded-2xl mt-10 border border-slate-100 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-900 mb-2">Contato e Suporte</h2>
-                    <p class="text-sm text-slate-500">Se você tiver dúvidas sobre esta Política de Privacidade ou sobre as práticas de segurança do aplicativo, entre em contato com a nossa equipe de desenvolvimento através do e-mail de suporte fornecido na nossa página oficial na Google Play Store.</p>
-                </section>
-            </div>
+    <section class="pt-32 pb-16 px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">Termos e Privacidade</h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Transparência é o nosso alicerce. Entenda como protegemos os seus dados, como funciona a assinatura da inteligência artificial e as regras de utilização da plataforma.
+            </p>
+            <p class="text-[13px] text-slate-500 mt-6 font-medium uppercase tracking-widest">Última atualização: Abril de 2026</p>
         </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-24 flex flex-col md:flex-row gap-12 items-start">
         
-        <footer class="text-center mt-12 text-slate-400 text-sm font-medium">
-            <p>&copy; 2026 Bíblia com Assistente. Todos os direitos reservados.</p>
-        </footer>
+        <aside class="w-full md:w-64 flex-shrink-0 md:sticky md:top-24 hidden md:block">
+            <nav class="flex flex-col text-[14px] font-medium border-l-2 border-slate-200 dark:border-slate-800">
+                <a href="#termos" class="toc-link block px-4 py-2.5 text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 transition-colors border-l-2 -ml-[2px] border-transparent">Termos de Uso</a>
+                <a href="#privacidade" class="toc-link block px-4 py-2.5 text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 transition-colors border-l-2 -ml-[2px] border-transparent">Privacidade e Dados (LGPD)</a>
+                <a href="#assinatura" class="toc-link block px-4 py-2.5 text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 transition-colors border-l-2 -ml-[2px] border-transparent">Contrato de Assinatura</a>
+                <a href="#dispositivos" class="toc-link block px-4 py-2.5 text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 transition-colors border-l-2 -ml-[2px] border-transparent">Dispositivos Compatíveis</a>
+            </nav>
+        </aside>
+
+        <article class="flex-1 prose prose-slate dark:prose-invert prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-p:leading-relaxed prose-a:text-blue-600 dark:prose-a:text-blue-400 max-w-none">
+            
+            <section id="termos" class="scroll-mt-24">
+                <h2>1. Termos e Condições de Uso</h2>
+                <p>Bem-vindo ao aplicativo <strong>Bíblia com Assistente</strong>. Ao utilizar a nossa plataforma, o utilizador concorda expressamente com os seguintes termos:</p>
+                <ul>
+                    <li><strong>Natureza do Serviço:</strong> Oferecemos acesso ao texto bíblico (versão ARC) integrado a um assistente de Inteligência Artificial generativa (baseado na tecnologia Gemini do Google Cloud) treinado para fornecer exegese, pesquisa e auxílio teológico.</li>
+                    <li><strong>Limitações da Inteligência Artificial:</strong> Embora a nossa IA seja rigorosamente configurada (Alma Interna) para operar sob uma perspetiva neotestamentária e de raiz protestante histórica, <strong>a IA pode cometer erros ou apresentar alucinações</strong>. Todo o conteúdo gerado deve ser analisado e validado à luz das Sagradas Escrituras. A responsabilidade pela utilização do texto gerado é exclusivamente do utilizador.</li>
+                    <li><strong>Conduta do Utilizador:</strong> É terminantemente proibido utilizar o assistente para gerar conteúdo ilícito, promover discurso de ódio, violência ou tentar aplicar engenharia reversa ("jailbreak") para contornar a regra de fé estabelecida no sistema. A violação resultará no banimento imediato da conta sem direito a reembolso.</li>
+                </ul>
+            </section>
+
+            <hr class="my-12 border-slate-200 dark:border-slate-800">
+
+            <section id="privacidade" class="scroll-mt-24">
+                <h2>2. Política de Privacidade (LGPD)</h2>
+                <p>Em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), declaramos total transparência sobre a recolha e tratamento dos seus dados:</p>
+                <ul>
+                    <li><strong>Dados Recolhidos:</strong> Recolhemos apenas o seu endereço de e-mail (para fins de autenticação), uma identificação única do seu dispositivo (Device ID) e o histórico de interações (perguntas e marcações bíblicas) geradas na aplicação.</li>
+                    <li><strong>Processamento por Inteligência Artificial:</strong> Ao enviar uma pergunta para o chat, o texto inserido é processado de forma segura e anónima através da API da Google. <strong>Não utilizamos</strong> os seus dados pessoais ou as suas conversas para treinar modelos de inteligência artificial públicos.</li>
+                    <li><strong>Dados Financeiros:</strong> Toda a infraestrutura financeira é processada pelo <strong>Mercado Pago</strong> sob rigorosos padrões globais de segurança (PCI Compliance). <strong>Nós não armazenamos, não temos acesso e não processamos</strong> os seus dados bancários, números de cartão ou chaves PIX privadas.</li>
+                    <li><strong>Direitos do Titular:</strong> O utilizador pode, a qualquer momento, solicitar a exclusão definitiva da sua conta, bem como todo o seu histórico de chat e marcações, bastando para tal entrar em contacto com o nosso suporte.</li>
+                </ul>
+            </section>
+
+            <hr class="my-12 border-slate-200 dark:border-slate-800">
+
+            <section id="assinatura" class="scroll-mt-24">
+                <h2>3. Contrato de Assinatura e Pagamentos</h2>
+                <p>O Assistente de IA é um serviço premium disponibilizado através de planos de assinatura. Ao assinar um plano, aplicam-se as seguintes condições:</p>
+                <div class="bg-blue-50 dark:bg-blue-900/10 border-l-4 border-blue-600 p-5 rounded-r-2xl my-6">
+                    <h4 class="text-blue-800 dark:text-blue-300 font-bold m-0 mb-2 text-lg">Regra de Segurança: Dispositivo Único</h4>
+                    <p class="text-sm text-blue-700 dark:text-blue-400 m-0">
+                        Para evitar o compartilhamento não autorizado de contas e garantir a sustentabilidade dos custos do servidor IA, <strong>a sua conta está bloqueada ao dispositivo em que o login foi realizado</strong>. Se fizer login em outro telemóvel ou computador, o sistema detetará automaticamente a mudança e desconectará o acesso no dispositivo anterior.
+                    </p>
+                </div>
+                <ul>
+                    <li><strong>Ciclo de Faturamento:</strong> Os planos (Mensageiro, Estudioso, Teólogo) concedem acesso pelo período exato de <strong>30 dias</strong> a contar do momento da aprovação do pagamento.</li>
+                    <li><strong>Pagamento via PIX:</strong> Trabalhamos exclusivamente com o método PIX. Devido a esta modalidade, <strong>não existe renovação automática</strong> de cobrança. Ao término dos 30 dias, a assinatura será suspensa e o utilizador deverá gerar um novo QR Code manualmente no aplicativo se desejar continuar a usar o serviço.</li>
+                    <li><strong>Uso Justo (Fair Use):</strong> O uso da API da Google Cloud gera custos por "token" processado. Os planos possuem limites técnicos virtuais estabelecidos pelo motor IA. O uso de automações (bots) para bombardear o servidor com perguntas resultará na suspensão da chave de acesso.</li>
+                </ul>
+            </section>
+
+            <hr class="my-12 border-slate-200 dark:border-slate-800">
+
+            <section id="dispositivos" class="scroll-mt-24">
+                <h2>4. Dispositivos Compatíveis e Requisitos</h2>
+                <p>Para garantir a melhor experiência de leitura e interação em tempo real, a aplicação requer as seguintes especificações:</p>
+                <ul>
+                    <li><strong>Conectividade:</strong> É necessária uma conexão ativa à internet (Wi-Fi ou dados móveis) para a autenticação, geração do texto bíblico, processamento da inteligência artificial e verificação da assinatura.</li>
+                    <li><strong>Navegadores:</strong> Suporte completo para Google Chrome, Safari, Mozilla Firefox e Microsoft Edge (versões atualizadas).</li>
+                    <li><strong>Sistemas Operacionais:</strong> Android 8.0+ (via navegador ou APK instalado) e iOS 14.0+ (via Safari). O layout é totalmente responsivo (Progressive Web App).</li>
+                    <li><strong>Armazenamento Local:</strong> O aplicativo utiliza o armazenamento seguro do seu próprio navegador (LocalStorage) para salvar as suas preferências de leitura (tamanho da fonte, tema claro/escuro) e o histórico imediato do chat. A limpeza do cache do navegador pode redefinir estas preferências visuais.</li>
+                </ul>
+            </section>
+            
+        </article>
     </main>
 
+    <footer class="bg-white dark:bg-[#0f172a] border-t border-slate-200 dark:border-slate-800 pt-12 pb-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="font-bold text-slate-800 dark:text-slate-200 text-lg mb-1">Bíblia com Assistente</p>
+                <p class="text-sm text-slate-500">Desenvolvido para edificação, com tecnologia de ponta.</p>
+            </div>
+            <div class="text-sm text-slate-400 text-center md:text-right">
+                <p>&copy; 2026 Ortodoxia Bíblica. Todos os direitos reservados.</p>
+                <p class="mt-1">Pagamentos processados com segurança por Mercado Pago.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Lógica do Dark Mode (Mesma do aplicativo)
+        const btnTema = document.getElementById('btnTema');
+        const htmlElement = document.documentElement;
+
+        function atualizarTema() {
+            const isDark = htmlElement.classList.contains('dark');
+            document.getElementById('meta-theme-color').content = isDark ? "#0b1120" : "#ffffff";
+        }
+
+        // Verifica estado inicial
+        if (localStorage.getItem('tema') === 'dark' || (!('tema' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+        atualizarTema();
+
+        // Botão de alternância
+        btnTema.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.setItem('tema', 'dark');
+            } else {
+                localStorage.setItem('tema', 'light');
+            }
+            atualizarTema();
+        });
+
+        // 2. Scroll Spy (Marcador na navegação lateral)
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = document.querySelectorAll('main section');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px', // Ajusta o ponto de gatilho para o terço superior da tela
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Remove active de todos
+                    tocLinks.forEach(link => link.classList.remove('active'));
+                    // Adiciona active no correspondente
+                    const id = entry.target.getAttribute('id');
+                    const activeLink = document.querySelector(`.toc-link[href="#${id}"]`);
+                    if(activeLink) activeLink.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
